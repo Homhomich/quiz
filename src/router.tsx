@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router';
 
-import NotFoundPage from './pages/NotFoundPage';
 import { QuizPage } from '@/pages/QuizPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
