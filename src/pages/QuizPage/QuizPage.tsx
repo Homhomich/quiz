@@ -92,6 +92,7 @@ export const QuizPage: React.FC<Props> = ({ questions = quizQuestions }) => {
             variant="outlined"
             color="primary"
             onClick={handleSubmit}
+            disabled={!userAnswer}
           >
             Submit
           </Button>
