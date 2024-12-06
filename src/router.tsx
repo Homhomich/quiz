@@ -1,17 +1,17 @@
-import { createBrowserRouter } from 'react-router'
+import { createBrowserRouter } from 'react-router';
 
-import Index from './pages/Index'
-import NotFoundPage from './pages/NotFoundPage'
+import NotFoundPage from './pages/NotFoundPage';
+import { QuizPage } from '@/pages/QuizPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Index />,
+    element: <QuizPage />,
   },
   {
     path: '*',
     element: <NotFoundPage />,
   },
-])
+]);
 
-export default router
+export default router;

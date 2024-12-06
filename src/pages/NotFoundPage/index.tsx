@@ -1,13 +1,13 @@
-import React from 'react'
-import { Box, Typography, Button } from '@mui/material'
-import { useNavigate } from 'react-router'
+import React from 'react';
+import { Box, Typography, Button } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 const NotFoundPage: React.FC = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleGoHome = () => {
-    navigate('/')
-  }
+    navigate('/');
+  };
 
   return (
     <Box
@@ -34,7 +34,7 @@ const NotFoundPage: React.FC = () => {
         Go to Home
       </Button>
     </Box>
-  )
-}
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
