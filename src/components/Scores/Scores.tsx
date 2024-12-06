@@ -16,7 +16,7 @@ interface ScorePageProps {
 
 /**
  * This component takes array of questions and user answers, and by using calculateScore
- * compare submitted answers to a correct answers
+ * compare submitted answers to a correct answers.
  * */
 export const ScorePage: React.FC<ScorePageProps> = ({
   questions,
