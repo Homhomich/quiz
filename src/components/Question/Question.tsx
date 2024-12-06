@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import {
   Box,
   FormControl,
@@ -20,18 +20,17 @@ export const QuizQuestion: React.FC<Props> = ({
   chosenAnswerId,
   onAnswerChose,
 }) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) =>
+    onAnswerChose(question.id, Number(event.target.value));
+
   return (
     <Box data-testid="quiz-question-container">
       <Typography data-testid="quiz-question-text" variant="body1" gutterBottom>
         {question.questionText}
       </Typography>
+
       <FormControl component="fieldset">
-        <RadioGroup
-          value={chosenAnswerId || ''}
-          onChange={(event) =>
-            onAnswerChose(question.id, Number(event.target.value))
-          }
-        >
+        <RadioGroup value={chosenAnswerId || ''} onChange={handleChange}>
           {question.answerOptions.map((option) => (
             <FormControlLabel
               data-testid={'quiz-question-option-' + option.id}
